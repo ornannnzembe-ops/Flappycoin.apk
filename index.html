@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flappy-Coin</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="assets/logo.png" alt="Logo Flappy-Coin" class="logo">
+    <h1>Flappy-Coin</h1>
+    <p>Attrape les pièces et deviens le champion !</p>
+</header>
+
+<main>
+    <section class="screenshots">
+        <h2>Captures d’écran</h2>
+        <div class="slider">
+            <img src="assets/screenshot1.png" alt="Capture du jeu Flappy-Coin">
+            <img src="assets/screenshot2.png" alt="Capture du jeu Flappy-Coin">
+        </div>
+    </section>
+
+    <section class="download">
+        <h2>Télécharge maintenant</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.example.flappycoin" target="_blank" class="btn btn-store">Play Store</a>
+        <a href="apk/flappy-coin.apk" download class="btn btn-apk">Télécharger APK</a>
+    </section>
+
+    <section class="about">
+        <h2>À propos du jeu</h2>
+        <p>Flappy-Coin est simple et addictif ! Collecte un maximum de pièces, évite les obstacles et défie tes amis pour devenir le champion ultime.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Leonardo Dev</p>
+</footer>
+
+<script>
+    // Simple slider animation
+    const slider = document.querySelector('.slider');
+    const images = slider.querySelectorAll('img');
+    let index = 0;
+    setInterval(() => {
+        images.forEach(img => img.style.opacity = 0);
+        images[index].style.opacity = 1;
+        index = (index + 1) % images.length;
+    }, 3000);
+</script>
+</body>
+</html>
